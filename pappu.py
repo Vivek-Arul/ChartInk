@@ -85,16 +85,15 @@ def update_sheet_error(worksheet):
 
 
 
-while True:
 
-  with ThreadPoolExecutor() as executor:
-    futures = [ executor.submit(GetDataFromChartink, f"{conditions[i]}", f"p{i+1}") for i in range(total_conditions)]
-    print("[+] Getting data from chart link please wait...")
-    wait(futures)
-    print("[+] Successfully Updated the Data to sheet")
+with ThreadPoolExecutor() as executor:
+  futures = [ executor.submit(GetDataFromChartink, f"{conditions[i]}", f"p{i+1}") for i in range(total_conditions)]
+  print("[+] Getting data from chart link please wait...")
+  wait(futures)
+  print("[+] Successfully Updated the Data to sheet")
 
-  print("Waiting for 1 sec before updating")
-  time.sleep(1)
+print("Waiting for 1 sec before updating")
+time.sleep(1)
 
 # uncomment to create a worksheet and spreadsheet if needed
 # create_worksheet()
