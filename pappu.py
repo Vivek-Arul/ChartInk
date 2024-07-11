@@ -11,7 +11,7 @@ from concurrent.futures import ThreadPoolExecutor, wait
 Charting_Link = "https://chartink.com/screener/"
 Charting_url = 'https://chartink.com/screener/process'
 
-spreadsheet_name = "pappu"
+spreadsheet_name = "suriya"
 worksheet_letter = "p"
 total_no_of_worksheet = 27
 
