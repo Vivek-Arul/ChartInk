@@ -22,7 +22,7 @@ scope = [
 ]
 
 creds = ServiceAccountCredentials.from_json_keyfile_name(
-  'sheshadri-python-test-9a0984512950.json', scope)
+  'credentials.json', scope)
 
 # client = gspread.authorize(creds, client_factory=gspread.client.BackoffClient)
 client = gspread.authorize(creds)
