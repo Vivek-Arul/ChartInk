@@ -3,6 +3,7 @@ name: Update Data Every 5 Minutes
 on:
   schedule:
     - cron: "*/1 * * * *" # Runs every 5 minutes
+  workflow_dispatch:
 
 jobs:
   update-data:
