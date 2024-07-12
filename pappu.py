@@ -21,8 +21,9 @@ scope = [
   "https://www.googleapis.com/auth/drive"
 ]
 
+google_credentials_json = os.getenv('GOOGLE_CREDENTIALS')
 creds = ServiceAccountCredentials.from_json_keyfile_name(
-  'credentials.json', scope)
+    google_credentials_json, scope)
 
 # client = gspread.authorize(creds, client_factory=gspread.client.BackoffClient)
 client = gspread.authorize(creds)
